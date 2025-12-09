@@ -11,4 +11,11 @@
 module load cuda/11.8.0
 module load anaconda3
 
-conda env create -n deepspeed -f ../environment.yml --force
+# -------------------------------------------------------
+
+conda install -n base -c conda-forge mamba -y
+
+# -------------------------------------------------------
+mamba env create -n deepspeed -f ../environment.yml --force
+
+echo "Environment creation complete."
